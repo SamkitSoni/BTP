@@ -1,0 +1,8 @@
+flwr==1.5.0
+torch>=1.12
+pandas
+numpy
+scikit-learn
+opacus
+matplotlib
+tqdm

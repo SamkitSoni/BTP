@@ -1,0 +1,27 @@
+[AUTO] Loaded 88 features from data/features.json
+
+[STEP] Running all experiments using features from data/features.json
+[INFO] Output will be saved to results/experiment_output.log
+
+=== Running BASELINE experiment ===
+Running: python orchestrator.py --client_script client_base.py --clients_dir clients --rounds 5 --label readmit_30 --client_args --log-dir logs/baseline
+
+=== Running DP experiment ===
+Running: python orchestrator.py --client_script client_dp.py --clients_dir clients --rounds 5 --label readmit_30 --client_args --log-dir logs/dp --noise_multiplier 0.5 --local_epochs 3
+
+=== Running ADP experiment ===
+Running: python orchestrator.py --client_script client_adp.py --clients_dir clients --rounds 5 --label readmit_30 --client_args --log-dir logs/adp --base_noise 0.6 --alpha 0.5 --min_noise 0.05 --local_epochs 3
+
+[STEP] Generating plots and summary...
+Saved results/accuracy_over_rounds.png
+Saved results/acc_vs_epsilon.png
+Saved results/summary.csv
+
+=== ALL DONE! ===
+
+Check the results folder:
+ - accuracy_over_rounds.png
+ - acc_vs_epsilon.png
+ - summary.csv
+ - experiment_output.log
+

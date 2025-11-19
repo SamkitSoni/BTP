@@ -1,0 +1,364 @@
+================================================================================
+FEDERATED LEARNING EXPERIMENT OUTPUT LOG
+================================================================================
+
+INFO flwr 2025-11-18 20:58:47,855 | app.py:162 | Starting Flower server, config: ServerConfig(num_rounds=5, round_timeout=None)
+INFO flwr 2025-11-18 20:58:47,876 | app.py:175 | Flower ECE: gRPC server running (5 rounds), SSL is disabled
+INFO flwr 2025-11-18 20:58:47,876 | server.py:89 | Initializing global parameters
+INFO flwr 2025-11-18 20:58:47,876 | server.py:276 | Requesting initial parameters from one random client
+[AUTO] Loaded 88 features from data/features.json
+Starting Flower server…
+Starting client: python client_base.py --data clients/client_0_hospital_7.csv --client_id 0 --label readmit_30 --server-address 127.0.0.1:8080 --features time_in_hospital num_lab_procedures num_procedures num_medications number_outpatient number_emergency number_inpatient number_diagnoses age race_AfricanAmerican race_Asian race_Caucasian race_Hispanic race_Other gender_Female gender_Male gender_Unknown_Invalid admission_type_id_1 admission_type_id_2 admission_type_id_3 admission_type_id_4 admission_type_id_5 admission_type_id_6 admission_type_id_7 admission_type_id_8 discharge_disposition_id_1 discharge_disposition_id_10 discharge_disposition_id_11 discharge_disposition_id_12 discharge_disposition_id_13 discharge_disposition_id_14 discharge_disposition_id_15 discharge_disposition_id_16 discharge_disposition_id_17 discharge_disposition_id_18 discharge_disposition_id_19 discharge_disposition_id_2 discharge_disposition_id_20 discharge_disposition_id_22 discharge_disposition_id_23 discharge_disposition_id_24 discharge_disposition_id_25 discharge_disposition_id_27 discharge_disposition_id_28 discharge_disposition_id_3 discharge_disposition_id_4 discharge_disposition_id_5 discharge_disposition_id_6 discharge_disposition_id_7 discharge_disposition_id_8 discharge_disposition_id_9 admission_source_id_1 admission_source_id_10 admission_source_id_11 admission_source_id_13 admission_source_id_14 admission_source_id_17 admission_source_id_2 admission_source_id_20 admission_source_id_22 admission_source_id_25 admission_source_id_3 admission_source_id_4 admission_source_id_5 admission_source_id_6 admission_source_id_7 admission_source_id_8 admission_source_id_9 max_glu_serum__200 max_glu_serum__300 max_glu_serum_NA max_glu_serum_Norm A1Cresult__7 A1Cresult__8 A1Cresult_NA A1Cresult_Norm metformin_Down metformin_No metformin_Steady metformin_Up insulin_Down insulin_No insulin_Steady insulin_Up change_Ch change_No diabetesMed_No diabetesMed_Yes --log-dir logs/baseline
+Starting client: python client_base.py --data clients/client_1_hospital_1.csv --client_id 1 --label readmit_30 --server-address 127.0.0.1:8080 --features time_in_hospital num_lab_procedures num_procedures num_medications number_outpatient number_emergency number_inpatient number_diagnoses age race_AfricanAmerican race_Asian race_Caucasian race_Hispanic race_Other gender_Female gender_Male gender_Unknown_Invalid admission_type_id_1 admission_type_id_2 admission_type_id_3 admission_type_id_4 admission_type_id_5 admission_type_id_6 admission_type_id_7 admission_type_id_8 discharge_disposition_id_1 discharge_disposition_id_10 discharge_disposition_id_11 discharge_disposition_id_12 discharge_disposition_id_13 discharge_disposition_id_14 discharge_disposition_id_15 discharge_disposition_id_16 discharge_disposition_id_17 discharge_disposition_id_18 discharge_disposition_id_19 discharge_disposition_id_2 discharge_disposition_id_20 discharge_disposition_id_22 discharge_disposition_id_23 discharge_disposition_id_24 discharge_disposition_id_25 discharge_disposition_id_27 discharge_disposition_id_28 discharge_disposition_id_3 discharge_disposition_id_4 discharge_disposition_id_5 discharge_disposition_id_6 discharge_disposition_id_7 discharge_disposition_id_8 discharge_disposition_id_9 admission_source_id_1 admission_source_id_10 admission_source_id_11 admission_source_id_13 admission_source_id_14 admission_source_id_17 admission_source_id_2 admission_source_id_20 admission_source_id_22 admission_source_id_25 admission_source_id_3 admission_source_id_4 admission_source_id_5 admission_source_id_6 admission_source_id_7 admission_source_id_8 admission_source_id_9 max_glu_serum__200 max_glu_serum__300 max_glu_serum_NA max_glu_serum_Norm A1Cresult__7 A1Cresult__8 A1Cresult_NA A1Cresult_Norm metformin_Down metformin_No metformin_Steady metformin_Up insulin_Down insulin_No insulin_Steady insulin_Up change_Ch change_No diabetesMed_No diabetesMed_Yes --log-dir logs/baseline
+Starting client: python client_base.py --data clients/client_2_hospital_17.csv --client_id 2 --label readmit_30 --server-address 127.0.0.1:8080 --features time_in_hospital num_lab_procedures num_procedures num_medications number_outpatient number_emergency number_inpatient number_diagnoses age race_AfricanAmerican race_Asian race_Caucasian race_Hispanic race_Other gender_Female gender_Male gender_Unknown_Invalid admission_type_id_1 admission_type_id_2 admission_type_id_3 admission_type_id_4 admission_type_id_5 admission_type_id_6 admission_type_id_7 admission_type_id_8 discharge_disposition_id_1 discharge_disposition_id_10 discharge_disposition_id_11 discharge_disposition_id_12 discharge_disposition_id_13 discharge_disposition_id_14 discharge_disposition_id_15 discharge_disposition_id_16 discharge_disposition_id_17 discharge_disposition_id_18 discharge_disposition_id_19 discharge_disposition_id_2 discharge_disposition_id_20 discharge_disposition_id_22 discharge_disposition_id_23 discharge_disposition_id_24 discharge_disposition_id_25 discharge_disposition_id_27 discharge_disposition_id_28 discharge_disposition_id_3 discharge_disposition_id_4 discharge_disposition_id_5 discharge_disposition_id_6 discharge_disposition_id_7 discharge_disposition_id_8 discharge_disposition_id_9 admission_source_id_1 admission_source_id_10 admission_source_id_11 admission_source_id_13 admission_source_id_14 admission_source_id_17 admission_source_id_2 admission_source_id_20 admission_source_id_22 admission_source_id_25 admission_source_id_3 admission_source_id_4 admission_source_id_5 admission_source_id_6 admission_source_id_7 admission_source_id_8 admission_source_id_9 max_glu_serum__200 max_glu_serum__300 max_glu_serum_NA max_glu_serum_Norm A1Cresult__7 A1Cresult__8 A1Cresult_NA A1Cresult_Norm metformin_Down metformin_No metformin_Steady metformin_Up insulin_Down insulin_No insulin_Steady insulin_Up change_Ch change_No diabetesMed_No diabetesMed_Yes --log-dir logs/baseline
+Starting client: python client_base.py --data clients/client_3_hospital_4.csv --client_id 3 --label readmit_30 --server-address 127.0.0.1:8080 --features time_in_hospital num_lab_procedures num_procedures num_medications number_outpatient number_emergency number_inpatient number_diagnoses age race_AfricanAmerican race_Asian race_Caucasian race_Hispanic race_Other gender_Female gender_Male gender_Unknown_Invalid admission_type_id_1 admission_type_id_2 admission_type_id_3 admission_type_id_4 admission_type_id_5 admission_type_id_6 admission_type_id_7 admission_type_id_8 discharge_disposition_id_1 discharge_disposition_id_10 discharge_disposition_id_11 discharge_disposition_id_12 discharge_disposition_id_13 discharge_disposition_id_14 discharge_disposition_id_15 discharge_disposition_id_16 discharge_disposition_id_17 discharge_disposition_id_18 discharge_disposition_id_19 discharge_disposition_id_2 discharge_disposition_id_20 discharge_disposition_id_22 discharge_disposition_id_23 discharge_disposition_id_24 discharge_disposition_id_25 discharge_disposition_id_27 discharge_disposition_id_28 discharge_disposition_id_3 discharge_disposition_id_4 discharge_disposition_id_5 discharge_disposition_id_6 discharge_disposition_id_7 discharge_disposition_id_8 discharge_disposition_id_9 admission_source_id_1 admission_source_id_10 admission_source_id_11 admission_source_id_13 admission_source_id_14 admission_source_id_17 admission_source_id_2 admission_source_id_20 admission_source_id_22 admission_source_id_25 admission_source_id_3 admission_source_id_4 admission_source_id_5 admission_source_id_6 admission_source_id_7 admission_source_id_8 admission_source_id_9 max_glu_serum__200 max_glu_serum__300 max_glu_serum_NA max_glu_serum_Norm A1Cresult__7 A1Cresult__8 A1Cresult_NA A1Cresult_Norm metformin_Down metformin_No metformin_Steady metformin_Up insulin_Down insulin_No insulin_Steady insulin_Up change_Ch change_No diabetesMed_No diabetesMed_Yes --log-dir logs/baseline
+Starting client: INFO flwr 2025-11-18 20:58:54,547 | grpc.py:49 | Opened insecure gRPC connection (no certificates were passed)
+INFO flwr 2025-11-18 20:58:54,547 | grpc.py:49 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2025-11-18 20:58:54,552 | connection.py:42 | ChannelConnectivity.IDLE
+DEBUG flwr 2025-11-18 20:58:54,552 | connection.py:42 | ChannelConnectivity.IDLE
+DEBUG flwr 2025-11-18 20:58:54,556 | connection.py:42 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2025-11-18 20:58:54,557 | connection.py:42 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2025-11-18 20:58:54,564 | connection.py:42 | ChannelConnectivity.READY
+DEBUG flwr 2025-11-18 20:58:54,565 | connection.py:42 | ChannelConnectivity.READY
+INFO flwr 2025-11-18 20:58:54,604 | server.py:280 | Received initial parameters from one random client
+INFO flwr 2025-11-18 20:58:54,606 | server.py:91 | Evaluating initial parameters
+INFO flwr 2025-11-18 20:58:54,606 | server.py:104 | FL starting
+DEBUG flwr 2025-11-18 20:58:54,606 | server.py:222 | fit_round 1: strategy sampled 2 clients (out of 2)
+INFO flwr 2025-11-18 20:58:55,000 | grpc.py:49 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2025-11-18 20:58:55,004 | connection.py:42 | ChannelConnectivity.IDLE
+DEBUG flwr 2025-11-18 20:58:55,006 | connection.py:42 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2025-11-18 20:58:55,009 | connection.py:42 | ChannelConnectivity.READY
+INFO flwr 2025-11-18 20:58:56,788 | grpc.py:49 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2025-11-18 20:58:56,831 | connection.py:42 | ChannelConnectivity.IDLE
+DEBUG flwr 2025-11-18 20:58:56,831 | connection.py:42 | ChannelConnectivity.READY
+INFO flwr 2025-11-18 20:58:57,949 | grpc.py:49 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2025-11-18 20:58:57,992 | connection.py:42 | ChannelConnectivity.IDLE
+DEBUG flwr 2025-11-18 20:58:57,993 | connection.py:42 | ChannelConnectivity.READY
+INFO flwr 2025-11-18 20:58:58,725 | grpc.py:49 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2025-11-18 20:58:58,762 | connection.py:42 | ChannelConnectivity.IDLE
+DEBUG flwr 2025-11-18 20:58:58,772 | connection.py:42 | ChannelConnectivity.READY
+DEBUG flwr 2025-11-18 20:59:01,239 | server.py:236 | fit_round 1 received 2 results and 0 failures
+WARNING flwr 2025-11-18 20:59:01,250 | fedavg.py:242 | No fit_metrics_aggregation_fn provided
+DEBUG flwr 2025-11-18 20:59:01,250 | server.py:173 | evaluate_round 1: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 20:59:02,409 | server.py:187 | evaluate_round 1 received 6 results and 0 failures
+WARNING flwr 2025-11-18 20:59:02,410 | fedavg.py:273 | No evaluate_metrics_aggregation_fn provided
+DEBUG flwr 2025-11-18 20:59:02,410 | server.py:222 | fit_round 2: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 20:59:14,492 | server.py:236 | fit_round 2 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 20:59:14,506 | server.py:173 | evaluate_round 2: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 20:59:15,622 | server.py:187 | evaluate_round 2 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 20:59:15,622 | server.py:222 | fit_round 3: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 20:59:27,988 | server.py:236 | fit_round 3 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 20:59:27,990 | server.py:173 | evaluate_round 3: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 20:59:28,970 | server.py:187 | evaluate_round 3 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 20:59:28,970 | server.py:222 | fit_round 4: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 20:59:40,001 | server.py:236 | fit_round 4 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 20:59:40,003 | server.py:173 | evaluate_round 4: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 20:59:41,157 | server.py:187 | evaluate_round 4 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 20:59:41,157 | server.py:222 | fit_round 5: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 20:59:53,410 | server.py:236 | fit_round 5 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 20:59:53,411 | server.py:173 | evaluate_round 5: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 20:59:54,510 | server.py:187 | evaluate_round 5 received 6 results and 0 failures
+INFO flwr 2025-11-18 20:59:54,510 | server.py:153 | FL finished in 61.415836878004484
+INFO flwr 2025-11-18 20:59:54,511 | app.py:225 | app_fit: losses_distributed [(1, 0.32212510725029625), (2, 0.3173828302588063), (3, 0.3185966996434592), (4, 0.3205618859866031), (5, 0.3339294821274755)]
+INFO flwr 2025-11-18 20:59:54,511 | app.py:226 | app_fit: metrics_distributed_fit {}
+INFO flwr 2025-11-18 20:59:54,511 | app.py:227 | app_fit: metrics_distributed {}
+INFO flwr 2025-11-18 20:59:54,511 | app.py:228 | app_fit: losses_centralized []
+INFO flwr 2025-11-18 20:59:54,511 | app.py:229 | app_fit: metrics_centralized {}
+DEBUG flwr 2025-11-18 20:59:54,519 | connection.py:139 | gRPC channel closed
+DEBUG flwr 2025-11-18 20:59:54,519 | connection.py:139 | gRPC channel closed
+DEBUG flwr 2025-11-18 20:59:54,519 | connection.py:139 | gRPC channel closed
+INFO flwr 2025-11-18 20:59:54,519 | app.py:215 | Disconnect and shut down
+INFO flwr 2025-11-18 20:59:54,519 | app.py:215 | Disconnect and shut down
+DEBUG flwr 2025-11-18 20:59:54,519 | connection.py:139 | gRPC channel closed
+INFO flwr 2025-11-18 20:59:54,519 | app.py:215 | Disconnect and shut down
+DEBUG flwr 2025-11-18 20:59:54,519 | connection.py:139 | gRPC channel closed
+INFO flwr 2025-11-18 20:59:54,519 | app.py:215 | Disconnect and shut down
+INFO flwr 2025-11-18 20:59:54,519 | app.py:215 | Disconnect and shut down
+DEBUG flwr 2025-11-18 20:59:54,519 | connection.py:139 | gRPC channel closed
+INFO flwr 2025-11-18 20:59:54,520 | app.py:215 | Disconnect and shut down
+python client_base.py --data clients/client_4_hospital_6.csv --client_id 4 --label readmit_30 --server-address 127.0.0.1:8080 --features time_in_hospital num_lab_procedures num_procedures num_medications number_outpatient number_emergency number_inpatient number_diagnoses age race_AfricanAmerican race_Asian race_Caucasian race_Hispanic race_Other gender_Female gender_Male gender_Unknown_Invalid admission_type_id_1 admission_type_id_2 admission_type_id_3 admission_type_id_4 admission_type_id_5 admission_type_id_6 admission_type_id_7 admission_type_id_8 discharge_disposition_id_1 discharge_disposition_id_10 discharge_disposition_id_11 discharge_disposition_id_12 discharge_disposition_id_13 discharge_disposition_id_14 discharge_disposition_id_15 discharge_disposition_id_16 discharge_disposition_id_17 discharge_disposition_id_18 discharge_disposition_id_19 discharge_disposition_id_2 discharge_disposition_id_20 discharge_disposition_id_22 discharge_disposition_id_23 discharge_disposition_id_24 discharge_disposition_id_25 discharge_disposition_id_27 discharge_disposition_id_28 discharge_disposition_id_3 discharge_disposition_id_4 discharge_disposition_id_5 discharge_disposition_id_6 discharge_disposition_id_7 discharge_disposition_id_8 discharge_disposition_id_9 admission_source_id_1 admission_source_id_10 admission_source_id_11 admission_source_id_13 admission_source_id_14 admission_source_id_17 admission_source_id_2 admission_source_id_20 admission_source_id_22 admission_source_id_25 admission_source_id_3 admission_source_id_4 admission_source_id_5 admission_source_id_6 admission_source_id_7 admission_source_id_8 admission_source_id_9 max_glu_serum__200 max_glu_serum__300 max_glu_serum_NA max_glu_serum_Norm A1Cresult__7 A1Cresult__8 A1Cresult_NA A1Cresult_Norm metformin_Down metformin_No metformin_Steady metformin_Up insulin_Down insulin_No insulin_Steady insulin_Up change_Ch change_No diabetesMed_No diabetesMed_Yes --log-dir logs/baseline
+Starting client: python client_base.py --data clients/client_5_hospital_2.csv --client_id 5 --label readmit_30 --server-address 127.0.0.1:8080 --features time_in_hospital num_lab_procedures num_procedures num_medications number_outpatient number_emergency number_inpatient number_diagnoses age race_AfricanAmerican race_Asian race_Caucasian race_Hispanic race_Other gender_Female gender_Male gender_Unknown_Invalid admission_type_id_1 admission_type_id_2 admission_type_id_3 admission_type_id_4 admission_type_id_5 admission_type_id_6 admission_type_id_7 admission_type_id_8 discharge_disposition_id_1 discharge_disposition_id_10 discharge_disposition_id_11 discharge_disposition_id_12 discharge_disposition_id_13 discharge_disposition_id_14 discharge_disposition_id_15 discharge_disposition_id_16 discharge_disposition_id_17 discharge_disposition_id_18 discharge_disposition_id_19 discharge_disposition_id_2 discharge_disposition_id_20 discharge_disposition_id_22 discharge_disposition_id_23 discharge_disposition_id_24 discharge_disposition_id_25 discharge_disposition_id_27 discharge_disposition_id_28 discharge_disposition_id_3 discharge_disposition_id_4 discharge_disposition_id_5 discharge_disposition_id_6 discharge_disposition_id_7 discharge_disposition_id_8 discharge_disposition_id_9 admission_source_id_1 admission_source_id_10 admission_source_id_11 admission_source_id_13 admission_source_id_14 admission_source_id_17 admission_source_id_2 admission_source_id_20 admission_source_id_22 admission_source_id_25 admission_source_id_3 admission_source_id_4 admission_source_id_5 admission_source_id_6 admission_source_id_7 admission_source_id_8 admission_source_id_9 max_glu_serum__200 max_glu_serum__300 max_glu_serum_NA max_glu_serum_Norm A1Cresult__7 A1Cresult__8 A1Cresult_NA A1Cresult_Norm metformin_Down metformin_No metformin_Steady metformin_Up insulin_Down insulin_No insulin_Steady insulin_Up change_Ch change_No diabetesMed_No diabetesMed_Yes --log-dir logs/baseline
+
+================================================================================
+=== Running BASELINE experiment ===
+Command: python orchestrator.py --client_script client_base.py --clients_dir clients --rounds 5 --label readmit_30 --client_args --log-dir logs/baseline
+================================================================================
+
+INFO flwr 2025-11-18 20:59:57,462 | app.py:162 | Starting Flower server, config: ServerConfig(num_rounds=5, round_timeout=None)
+INFO flwr 2025-11-18 20:59:57,481 | app.py:175 | Flower ECE: gRPC server running (5 rounds), SSL is disabled
+INFO flwr 2025-11-18 20:59:57,482 | server.py:89 | Initializing global parameters
+INFO flwr 2025-11-18 20:59:57,482 | server.py:276 | Requesting initial parameters from one random client
+[AUTO] Loaded 88 features from data/features.json
+Starting Flower server…
+Starting client: python client_dp.py --data clients/client_0_hospital_7.csv --client_id 0 --label readmit_30 --server-address 127.0.0.1:8080 --features time_in_hospital num_lab_procedures num_procedures num_medications number_outpatient number_emergency number_inpatient number_diagnoses age race_AfricanAmerican race_Asian race_Caucasian race_Hispanic race_Other gender_Female gender_Male gender_Unknown_Invalid admission_type_id_1 admission_type_id_2 admission_type_id_3 admission_type_id_4 admission_type_id_5 admission_type_id_6 admission_type_id_7 admission_type_id_8 discharge_disposition_id_1 discharge_disposition_id_10 discharge_disposition_id_11 discharge_disposition_id_12 discharge_disposition_id_13 discharge_disposition_id_14 discharge_disposition_id_15 discharge_disposition_id_16 discharge_disposition_id_17 discharge_disposition_id_18 discharge_disposition_id_19 discharge_disposition_id_2 discharge_disposition_id_20 discharge_disposition_id_22 discharge_disposition_id_23 discharge_disposition_id_24 discharge_disposition_id_25 discharge_disposition_id_27 discharge_disposition_id_28 discharge_disposition_id_3 discharge_disposition_id_4 discharge_disposition_id_5 discharge_disposition_id_6 discharge_disposition_id_7 discharge_disposition_id_8 discharge_disposition_id_9 admission_source_id_1 admission_source_id_10 admission_source_id_11 admission_source_id_13 admission_source_id_14 admission_source_id_17 admission_source_id_2 admission_source_id_20 admission_source_id_22 admission_source_id_25 admission_source_id_3 admission_source_id_4 admission_source_id_5 admission_source_id_6 admission_source_id_7 admission_source_id_8 admission_source_id_9 max_glu_serum__200 max_glu_serum__300 max_glu_serum_NA max_glu_serum_Norm A1Cresult__7 A1Cresult__8 A1Cresult_NA A1Cresult_Norm metformin_Down metformin_No metformin_Steady metformin_Up insulin_Down insulin_No insulin_Steady insulin_Up change_Ch change_No diabetesMed_No diabetesMed_Yes --log-dir logs/dp --noise_multiplier 0.5 --local_epochs 3
+Starting client: python client_dp.py --data clients/client_1_hospital_1.csv --client_id 1 --label readmit_30 --server-address 127.0.0.1:8080 --features time_in_hospital num_lab_procedures num_procedures num_medications number_outpatient number_emergency number_inpatient number_diagnoses age race_AfricanAmerican race_Asian race_Caucasian race_Hispanic race_Other gender_Female gender_Male gender_Unknown_Invalid admission_type_id_1 admission_type_id_2 admission_type_id_3 admission_type_id_4 admission_type_id_5 admission_type_id_6 admission_type_id_7 admission_type_id_8 discharge_disposition_id_1 discharge_disposition_id_10 discharge_disposition_id_11 discharge_disposition_id_12 discharge_disposition_id_13 discharge_disposition_id_14 discharge_disposition_id_15 discharge_disposition_id_16 discharge_disposition_id_17 discharge_disposition_id_18 discharge_disposition_id_19 discharge_disposition_id_2 discharge_disposition_id_20 discharge_disposition_id_22 discharge_disposition_id_23 discharge_disposition_id_24 discharge_disposition_id_25 discharge_disposition_id_27 discharge_disposition_id_28 discharge_disposition_id_3 discharge_disposition_id_4 discharge_disposition_id_5 discharge_disposition_id_6 discharge_disposition_id_7 discharge_disposition_id_8 discharge_disposition_id_9 admission_source_id_1 admission_source_id_10 admission_source_id_11 admission_source_id_13 admission_source_id_14 admission_source_id_17 admission_source_id_2 admission_source_id_20 admission_source_id_22 admission_source_id_25 admission_source_id_3 admission_source_id_4 admission_source_id_5 admission_source_id_6 admission_source_id_7 admission_source_id_8 admission_source_id_9 max_glu_serum__200 max_glu_serum__300 max_glu_serum_NA max_glu_serum_Norm A1Cresult__7 A1Cresult__8 A1Cresult_NA A1Cresult_Norm metformin_Down metformin_No metformin_Steady metformin_Up insulin_Down insulin_No insulin_Steady insulin_Up change_Ch change_No diabetesMed_No diabetesMed_Yes --log-dir logs/dp --noise_multiplier 0.5 --local_epochs 3
+Starting client: python client_dp.py --data clients/client_2_hospital_17.csv --client_id 2 --label readmit_30 --server-address 127.0.0.1:8080 --features time_in_hospital num_lab_procedures num_procedures num_medications number_outpatient number_emergency number_inpatient number_diagnoses age race_AfricanAmerican race_Asian race_Caucasian race_Hispanic race_Other gender_Female gender_Male gender_Unknown_Invalid admission_type_id_1 admission_type_id_2 admission_type_id_3 admission_type_id_4 admission_type_id_5 admission_type_id_6 admission_type_id_7 admission_type_id_8 discharge_disposition_id_1 discharge_disposition_id_10 discharge_disposition_id_11 discharge_disposition_id_12 discharge_disposition_id_13 discharge_disposition_id_14 discharge_disposition_id_15 discharge_disposition_id_16 discharge_disposition_id_17 discharge_disposition_id_18 discharge_disposition_id_19 discharge_disposition_id_2 discharge_disposition_id_20 discharge_disposition_id_22 discharge_disposition_id_23 discharge_disposition_id_24 discharge_disposition_id_25 discharge_disposition_id_27 discharge_disposition_id_28 discharge_disposition_id_3 discharge_disposition_id_4 discharge_disposition_id_5 discharge_disposition_id_6 discharge_disposition_id_7 discharge_disposition_id_8 discharge_disposition_id_9 admission_source_id_1 admission_source_id_10 admission_source_id_11 admission_source_id_13 admission_source_id_14 admission_source_id_17 admission_source_id_2 admission_source_id_20 admission_source_id_22 admission_source_id_25 admission_source_id_3 admission_source_id_4 admission_source_id_5 admission_source_id_6 admission_source_id_7 admission_source_id_8 admission_source_id_9 max_glu_serum__200 max_glu_serum__300 max_glu_serum_NA max_glu_serum_Norm A1Cresult__7 A1Cresult__8 A1Cresult_NA A1Cresult_Norm metformin_Down metformin_No metformin_Steady metformin_Up insulin_Down insulin_No insulin_Steady insulin_Up change_Ch change_No diabetesMed_No diabetesMed_Yes --log-dir logs/dp --noise_multiplier 0.5 --local_epochs 3
+Starting client: python client_dp.py --data clients/client_3_hospital_4.csv --client_id 3 --label readmit_30 --server-address 127.0.0.1:8080 --features time_in_hospital num_lab_procedures num_procedures num_medications number_outpatient number_emergency number_inpatient number_diagnoses age race_AfricanAmerican race_Asian race_Caucasian race_Hispanic race_Other gender_Female gender_Male gender_Unknown_Invalid admission_type_id_1 admission_type_id_2 admission_type_id_3 admission_type_id_4 admission_type_id_5 admission_type_id_6 admission_type_id_7 admission_type_id_8 discharge_disposition_id_1 discharge_disposition_id_10 discharge_disposition_id_11 discharge_disposition_id_12 discharge_disposition_id_13 discharge_disposition_id_14 discharge_disposition_id_15 discharge_disposition_id_16 discharge_disposition_id_17 discharge_disposition_id_18 discharge_disposition_id_19 discharge_disposition_id_2 discharge_disposition_id_20 discharge_disposition_id_22 discharge_disposition_id_23 discharge_disposition_id_24 discharge_disposition_id_25 discharge_disposition_id_27 discharge_disposition_id_28 discharge_disposition_id_3 discharge_disposition_id_4 discharge_disposition_id_5 discharge_disposition_id_6 discharge_disposition_id_7 discharge_disposition_id_8 discharge_disposition_id_9 admission_source_id_1 admission_source_id_10 admission_source_id_11 admission_source_id_13 admission_source_id_14 admission_source_id_17 admission_source_id_2 admission_source_id_20 admission_source_id_22 admission_source_id_25 admission_source_id_3 admission_source_id_4 admission_source_id_5 admission_source_id_6 admission_source_id_7 admission_source_id_8 admission_source_id_9 max_glu_serum__200 max_glu_serum__300 max_glu_serum_NA max_glu_serum_Norm A1Cresult__7 A1Cresult__8 A1Cresult_NA A1Cresult_Norm metformin_Down metformin_No metformin_Steady metformin_Up insulin_Down insulin_No insulin_Steady insulin_Up change_Ch change_No diabetesMed_No diabetesMed_Yes --log-dir logs/dp --noise_multiplier 0.5 --local_epochs 3
+Starting client: /home/samkit/Web3/BTP/venv/lib/python3.12/site-packages/opacus/privacy_engine.py:96: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+INFO flwr 2025-11-18 21:00:03,368 | grpc.py:49 | Opened insecure gRPC connection (no certificates were passed)
+11/18/2025 21:00:03:INFO:Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2025-11-18 21:00:03,371 | connection.py:42 | ChannelConnectivity.IDLE
+11/18/2025 21:00:03:DEBUG:ChannelConnectivity.IDLE
+DEBUG flwr 2025-11-18 21:00:03,373 | connection.py:42 | ChannelConnectivity.CONNECTING
+11/18/2025 21:00:03:DEBUG:ChannelConnectivity.CONNECTING
+DEBUG flwr 2025-11-18 21:00:03,374 | connection.py:42 | ChannelConnectivity.READY
+11/18/2025 21:00:03:DEBUG:ChannelConnectivity.READY
+INFO flwr 2025-11-18 21:00:03,379 | server.py:280 | Received initial parameters from one random client
+INFO flwr 2025-11-18 21:00:03,379 | server.py:91 | Evaluating initial parameters
+INFO flwr 2025-11-18 21:00:03,380 | server.py:104 | FL starting
+/home/samkit/Web3/BTP/venv/lib/python3.12/site-packages/opacus/privacy_engine.py:96: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+INFO flwr 2025-11-18 21:00:03,817 | grpc.py:49 | Opened insecure gRPC connection (no certificates were passed)
+11/18/2025 21:00:03:INFO:Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2025-11-18 21:00:03,819 | connection.py:42 | ChannelConnectivity.IDLE
+11/18/2025 21:00:03:DEBUG:ChannelConnectivity.IDLE
+DEBUG flwr 2025-11-18 21:00:03,821 | connection.py:42 | ChannelConnectivity.READY
+11/18/2025 21:00:03:DEBUG:ChannelConnectivity.READY
+DEBUG flwr 2025-11-18 21:00:03,826 | server.py:222 | fit_round 1: strategy sampled 2 clients (out of 2)
+/home/samkit/Web3/BTP/client_dp.py:79: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/samkit/Web3/BTP/client_dp.py:79: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/samkit/Web3/BTP/venv/lib/python3.12/site-packages/opacus/privacy_engine.py:96: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+INFO flwr 2025-11-18 21:00:04,934 | grpc.py:49 | Opened insecure gRPC connection (no certificates were passed)
+11/18/2025 21:00:04:INFO:Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2025-11-18 21:00:04,963 | connection.py:42 | ChannelConnectivity.IDLE
+11/18/2025 21:00:04:DEBUG:ChannelConnectivity.IDLE
+DEBUG flwr 2025-11-18 21:00:04,970 | connection.py:42 | ChannelConnectivity.CONNECTING
+11/18/2025 21:00:04:DEBUG:ChannelConnectivity.CONNECTING
+DEBUG flwr 2025-11-18 21:00:04,970 | connection.py:42 | ChannelConnectivity.READY
+11/18/2025 21:00:04:DEBUG:ChannelConnectivity.READY
+/home/samkit/Web3/BTP/venv/lib/python3.12/site-packages/opacus/privacy_engine.py:96: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+INFO flwr 2025-11-18 21:00:06,256 | grpc.py:49 | Opened insecure gRPC connection (no certificates were passed)
+11/18/2025 21:00:06:INFO:Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2025-11-18 21:00:06,293 | connection.py:42 | ChannelConnectivity.IDLE
+11/18/2025 21:00:06:DEBUG:ChannelConnectivity.IDLE
+DEBUG flwr 2025-11-18 21:00:06,295 | connection.py:42 | ChannelConnectivity.READY
+11/18/2025 21:00:06:DEBUG:ChannelConnectivity.READY
+/home/samkit/Web3/BTP/venv/lib/python3.12/site-packages/opacus/privacy_engine.py:96: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+INFO flwr 2025-11-18 21:00:08,223 | grpc.py:49 | Opened insecure gRPC connection (no certificates were passed)
+11/18/2025 21:00:08:INFO:Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2025-11-18 21:00:07,503 | connection.py:42 | ChannelConnectivity.IDLE
+11/18/2025 21:00:07:DEBUG:ChannelConnectivity.IDLE
+DEBUG flwr 2025-11-18 21:00:07,504 | connection.py:42 | ChannelConnectivity.READY
+11/18/2025 21:00:07:DEBUG:ChannelConnectivity.READY
+/home/samkit/Web3/BTP/venv/lib/python3.12/site-packages/opacus/privacy_engine.py:96: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+INFO flwr 2025-11-18 21:00:07,890 | grpc.py:49 | Opened insecure gRPC connection (no certificates were passed)
+11/18/2025 21:00:07:INFO:Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2025-11-18 21:00:07,918 | connection.py:42 | ChannelConnectivity.IDLE
+11/18/2025 21:00:07:DEBUG:ChannelConnectivity.IDLE
+DEBUG flwr 2025-11-18 21:00:07,936 | connection.py:42 | ChannelConnectivity.READY
+11/18/2025 21:00:07:DEBUG:ChannelConnectivity.READY
+DEBUG flwr 2025-11-18 21:00:23,686 | server.py:236 | fit_round 1 received 2 results and 0 failures
+WARNING flwr 2025-11-18 21:00:23,687 | fedavg.py:242 | No fit_metrics_aggregation_fn provided
+DEBUG flwr 2025-11-18 21:00:23,687 | server.py:173 | evaluate_round 1: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 21:00:25,185 | server.py:187 | evaluate_round 1 received 6 results and 0 failures
+WARNING flwr 2025-11-18 21:00:25,186 | fedavg.py:273 | No evaluate_metrics_aggregation_fn provided
+DEBUG flwr 2025-11-18 21:00:25,186 | server.py:222 | fit_round 2: strategy sampled 6 clients (out of 6)
+/home/samkit/Web3/BTP/client_dp.py:79: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/samkit/Web3/BTP/client_dp.py:79: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/samkit/Web3/BTP/client_dp.py:79: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/samkit/Web3/BTP/client_dp.py:79: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+DEBUG flwr 2025-11-18 21:02:30,768 | server.py:236 | fit_round 2 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 21:02:30,772 | server.py:173 | evaluate_round 2: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 21:02:31,713 | server.py:187 | evaluate_round 2 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 21:02:31,713 | server.py:222 | fit_round 3: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 21:04:49,417 | server.py:236 | fit_round 3 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 21:04:49,419 | server.py:173 | evaluate_round 3: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 21:04:50,388 | server.py:187 | evaluate_round 3 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 21:04:50,388 | server.py:222 | fit_round 4: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 21:07:00,241 | server.py:236 | fit_round 4 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 21:07:00,242 | server.py:173 | evaluate_round 4: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 21:07:02,165 | server.py:187 | evaluate_round 4 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 21:07:02,165 | server.py:222 | fit_round 5: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 21:09:01,949 | server.py:236 | fit_round 5 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 21:09:01,951 | server.py:173 | evaluate_round 5: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 21:09:02,964 | server.py:187 | evaluate_round 5 received 6 results and 0 failures
+INFO flwr 2025-11-18 21:09:02,965 | server.py:153 | FL finished in 552.540771480999
+INFO flwr 2025-11-18 21:09:02,966 | app.py:225 | app_fit: losses_distributed [(1, 0.7024814874137114), (2, 0.7784779409323133), (3, 0.7765971447929824), (4, 0.7417529297788615), (5, 0.7264460519599544)]
+INFO flwr 2025-11-18 21:09:02,966 | app.py:226 | app_fit: metrics_distributed_fit {}
+INFO flwr 2025-11-18 21:09:02,966 | app.py:227 | app_fit: metrics_distributed {}
+INFO flwr 2025-11-18 21:09:02,966 | app.py:228 | app_fit: losses_centralized []
+INFO flwr 2025-11-18 21:09:02,966 | app.py:229 | app_fit: metrics_centralized {}
+DEBUG flwr 2025-11-18 21:09:02,977 | connection.py:139 | gRPC channel closed
+11/18/2025 21:09:02:DEBUG:gRPC channel closed
+DEBUG flwr 2025-11-18 21:09:02,977 | connection.py:139 | gRPC channel closed
+11/18/2025 21:09:02:DEBUG:gRPC channel closed
+INFO flwr 2025-11-18 21:09:02,977 | app.py:215 | Disconnect and shut down
+11/18/2025 21:09:02:INFO:Disconnect and shut down
+INFO flwr 2025-11-18 21:09:02,977 | app.py:215 | Disconnect and shut down
+11/18/2025 21:09:02:INFO:Disconnect and shut down
+DEBUG flwr 2025-11-18 21:09:02,977 | connection.py:139 | gRPC channel closed
+11/18/2025 21:09:02:DEBUG:gRPC channel closed
+INFO flwr 2025-11-18 21:09:02,979 | app.py:215 | Disconnect and shut down
+11/18/2025 21:09:02:INFO:Disconnect and shut down
+DEBUG flwr 2025-11-18 21:09:02,978 | connection.py:139 | gRPC channel closed
+11/18/2025 21:09:02:DEBUG:gRPC channel closed
+INFO flwr 2025-11-18 21:09:02,980 | app.py:215 | Disconnect and shut down
+11/18/2025 21:09:02:INFO:Disconnect and shut down
+DEBUG flwr 2025-11-18 21:09:02,978 | connection.py:139 | gRPC channel closed
+11/18/2025 21:09:02:DEBUG:gRPC channel closed
+DEBUG flwr 2025-11-18 21:09:02,979 | connection.py:139 | gRPC channel closed
+11/18/2025 21:09:02:DEBUG:gRPC channel closed
+INFO flwr 2025-11-18 21:09:02,983 | app.py:215 | Disconnect and shut down
+11/18/2025 21:09:02:INFO:Disconnect and shut down
+INFO flwr 2025-11-18 21:09:02,984 | app.py:215 | Disconnect and shut down
+11/18/2025 21:09:02:INFO:Disconnect and shut down
+python client_dp.py --data clients/client_4_hospital_6.csv --client_id 4 --label readmit_30 --server-address 127.0.0.1:8080 --features time_in_hospital num_lab_procedures num_procedures num_medications number_outpatient number_emergency number_inpatient number_diagnoses age race_AfricanAmerican race_Asian race_Caucasian race_Hispanic race_Other gender_Female gender_Male gender_Unknown_Invalid admission_type_id_1 admission_type_id_2 admission_type_id_3 admission_type_id_4 admission_type_id_5 admission_type_id_6 admission_type_id_7 admission_type_id_8 discharge_disposition_id_1 discharge_disposition_id_10 discharge_disposition_id_11 discharge_disposition_id_12 discharge_disposition_id_13 discharge_disposition_id_14 discharge_disposition_id_15 discharge_disposition_id_16 discharge_disposition_id_17 discharge_disposition_id_18 discharge_disposition_id_19 discharge_disposition_id_2 discharge_disposition_id_20 discharge_disposition_id_22 discharge_disposition_id_23 discharge_disposition_id_24 discharge_disposition_id_25 discharge_disposition_id_27 discharge_disposition_id_28 discharge_disposition_id_3 discharge_disposition_id_4 discharge_disposition_id_5 discharge_disposition_id_6 discharge_disposition_id_7 discharge_disposition_id_8 discharge_disposition_id_9 admission_source_id_1 admission_source_id_10 admission_source_id_11 admission_source_id_13 admission_source_id_14 admission_source_id_17 admission_source_id_2 admission_source_id_20 admission_source_id_22 admission_source_id_25 admission_source_id_3 admission_source_id_4 admission_source_id_5 admission_source_id_6 admission_source_id_7 admission_source_id_8 admission_source_id_9 max_glu_serum__200 max_glu_serum__300 max_glu_serum_NA max_glu_serum_Norm A1Cresult__7 A1Cresult__8 A1Cresult_NA A1Cresult_Norm metformin_Down metformin_No metformin_Steady metformin_Up insulin_Down insulin_No insulin_Steady insulin_Up change_Ch change_No diabetesMed_No diabetesMed_Yes --log-dir logs/dp --noise_multiplier 0.5 --local_epochs 3
+Starting client: python client_dp.py --data clients/client_5_hospital_2.csv --client_id 5 --label readmit_30 --server-address 127.0.0.1:8080 --features time_in_hospital num_lab_procedures num_procedures num_medications number_outpatient number_emergency number_inpatient number_diagnoses age race_AfricanAmerican race_Asian race_Caucasian race_Hispanic race_Other gender_Female gender_Male gender_Unknown_Invalid admission_type_id_1 admission_type_id_2 admission_type_id_3 admission_type_id_4 admission_type_id_5 admission_type_id_6 admission_type_id_7 admission_type_id_8 discharge_disposition_id_1 discharge_disposition_id_10 discharge_disposition_id_11 discharge_disposition_id_12 discharge_disposition_id_13 discharge_disposition_id_14 discharge_disposition_id_15 discharge_disposition_id_16 discharge_disposition_id_17 discharge_disposition_id_18 discharge_disposition_id_19 discharge_disposition_id_2 discharge_disposition_id_20 discharge_disposition_id_22 discharge_disposition_id_23 discharge_disposition_id_24 discharge_disposition_id_25 discharge_disposition_id_27 discharge_disposition_id_28 discharge_disposition_id_3 discharge_disposition_id_4 discharge_disposition_id_5 discharge_disposition_id_6 discharge_disposition_id_7 discharge_disposition_id_8 discharge_disposition_id_9 admission_source_id_1 admission_source_id_10 admission_source_id_11 admission_source_id_13 admission_source_id_14 admission_source_id_17 admission_source_id_2 admission_source_id_20 admission_source_id_22 admission_source_id_25 admission_source_id_3 admission_source_id_4 admission_source_id_5 admission_source_id_6 admission_source_id_7 admission_source_id_8 admission_source_id_9 max_glu_serum__200 max_glu_serum__300 max_glu_serum_NA max_glu_serum_Norm A1Cresult__7 A1Cresult__8 A1Cresult_NA A1Cresult_Norm metformin_Down metformin_No metformin_Steady metformin_Up insulin_Down insulin_No insulin_Steady insulin_Up change_Ch change_No diabetesMed_No diabetesMed_Yes --log-dir logs/dp --noise_multiplier 0.5 --local_epochs 3
+
+================================================================================
+=== Running DP experiment ===
+Command: python orchestrator.py --client_script client_dp.py --clients_dir clients --rounds 5 --label readmit_30 --client_args --log-dir logs/dp --noise_multiplier 0.5 --local_epochs 3
+================================================================================
+
+INFO flwr 2025-11-18 21:09:06,126 | app.py:162 | Starting Flower server, config: ServerConfig(num_rounds=5, round_timeout=None)
+INFO flwr 2025-11-18 21:09:06,205 | app.py:175 | Flower ECE: gRPC server running (5 rounds), SSL is disabled
+INFO flwr 2025-11-18 21:09:06,205 | server.py:89 | Initializing global parameters
+INFO flwr 2025-11-18 21:09:06,206 | server.py:276 | Requesting initial parameters from one random client
+[AUTO] Loaded 88 features from data/features.json
+Starting Flower server…
+Starting client: python client_adp.py --data clients/client_0_hospital_7.csv --client_id 0 --label readmit_30 --server-address 127.0.0.1:8080 --features time_in_hospital num_lab_procedures num_procedures num_medications number_outpatient number_emergency number_inpatient number_diagnoses age race_AfricanAmerican race_Asian race_Caucasian race_Hispanic race_Other gender_Female gender_Male gender_Unknown_Invalid admission_type_id_1 admission_type_id_2 admission_type_id_3 admission_type_id_4 admission_type_id_5 admission_type_id_6 admission_type_id_7 admission_type_id_8 discharge_disposition_id_1 discharge_disposition_id_10 discharge_disposition_id_11 discharge_disposition_id_12 discharge_disposition_id_13 discharge_disposition_id_14 discharge_disposition_id_15 discharge_disposition_id_16 discharge_disposition_id_17 discharge_disposition_id_18 discharge_disposition_id_19 discharge_disposition_id_2 discharge_disposition_id_20 discharge_disposition_id_22 discharge_disposition_id_23 discharge_disposition_id_24 discharge_disposition_id_25 discharge_disposition_id_27 discharge_disposition_id_28 discharge_disposition_id_3 discharge_disposition_id_4 discharge_disposition_id_5 discharge_disposition_id_6 discharge_disposition_id_7 discharge_disposition_id_8 discharge_disposition_id_9 admission_source_id_1 admission_source_id_10 admission_source_id_11 admission_source_id_13 admission_source_id_14 admission_source_id_17 admission_source_id_2 admission_source_id_20 admission_source_id_22 admission_source_id_25 admission_source_id_3 admission_source_id_4 admission_source_id_5 admission_source_id_6 admission_source_id_7 admission_source_id_8 admission_source_id_9 max_glu_serum__200 max_glu_serum__300 max_glu_serum_NA max_glu_serum_Norm A1Cresult__7 A1Cresult__8 A1Cresult_NA A1Cresult_Norm metformin_Down metformin_No metformin_Steady metformin_Up insulin_Down insulin_No insulin_Steady insulin_Up change_Ch change_No diabetesMed_No diabetesMed_Yes --log-dir logs/adp --base_noise 3.0 --alpha 0.3 --min_noise 0.5 --local_epochs 3
+Starting client: python client_adp.py --data clients/client_1_hospital_1.csv --client_id 1 --label readmit_30 --server-address 127.0.0.1:8080 --features time_in_hospital num_lab_procedures num_procedures num_medications number_outpatient number_emergency number_inpatient number_diagnoses age race_AfricanAmerican race_Asian race_Caucasian race_Hispanic race_Other gender_Female gender_Male gender_Unknown_Invalid admission_type_id_1 admission_type_id_2 admission_type_id_3 admission_type_id_4 admission_type_id_5 admission_type_id_6 admission_type_id_7 admission_type_id_8 discharge_disposition_id_1 discharge_disposition_id_10 discharge_disposition_id_11 discharge_disposition_id_12 discharge_disposition_id_13 discharge_disposition_id_14 discharge_disposition_id_15 discharge_disposition_id_16 discharge_disposition_id_17 discharge_disposition_id_18 discharge_disposition_id_19 discharge_disposition_id_2 discharge_disposition_id_20 discharge_disposition_id_22 discharge_disposition_id_23 discharge_disposition_id_24 discharge_disposition_id_25 discharge_disposition_id_27 discharge_disposition_id_28 discharge_disposition_id_3 discharge_disposition_id_4 discharge_disposition_id_5 discharge_disposition_id_6 discharge_disposition_id_7 discharge_disposition_id_8 discharge_disposition_id_9 admission_source_id_1 admission_source_id_10 admission_source_id_11 admission_source_id_13 admission_source_id_14 admission_source_id_17 admission_source_id_2 admission_source_id_20 admission_source_id_22 admission_source_id_25 admission_source_id_3 admission_source_id_4 admission_source_id_5 admission_source_id_6 admission_source_id_7 admission_source_id_8 admission_source_id_9 max_glu_serum__200 max_glu_serum__300 max_glu_serum_NA max_glu_serum_Norm A1Cresult__7 A1Cresult__8 A1Cresult_NA A1Cresult_Norm metformin_Down metformin_No metformin_Steady metformin_Up insulin_Down insulin_No insulin_Steady insulin_Up change_Ch change_No diabetesMed_No diabetesMed_Yes --log-dir logs/adp --base_noise 3.0 --alpha 0.3 --min_noise 0.5 --local_epochs 3
+Starting client: python client_adp.py --data clients/client_2_hospital_17.csv --client_id 2 --label readmit_30 --server-address 127.0.0.1:8080 --features time_in_hospital num_lab_procedures num_procedures num_medications number_outpatient number_emergency number_inpatient number_diagnoses age race_AfricanAmerican race_Asian race_Caucasian race_Hispanic race_Other gender_Female gender_Male gender_Unknown_Invalid admission_type_id_1 admission_type_id_2 admission_type_id_3 admission_type_id_4 admission_type_id_5 admission_type_id_6 admission_type_id_7 admission_type_id_8 discharge_disposition_id_1 discharge_disposition_id_10 discharge_disposition_id_11 discharge_disposition_id_12 discharge_disposition_id_13 discharge_disposition_id_14 discharge_disposition_id_15 discharge_disposition_id_16 discharge_disposition_id_17 discharge_disposition_id_18 discharge_disposition_id_19 discharge_disposition_id_2 discharge_disposition_id_20 discharge_disposition_id_22 discharge_disposition_id_23 discharge_disposition_id_24 discharge_disposition_id_25 discharge_disposition_id_27 discharge_disposition_id_28 discharge_disposition_id_3 discharge_disposition_id_4 discharge_disposition_id_5 discharge_disposition_id_6 discharge_disposition_id_7 discharge_disposition_id_8 discharge_disposition_id_9 admission_source_id_1 admission_source_id_10 admission_source_id_11 admission_source_id_13 admission_source_id_14 admission_source_id_17 admission_source_id_2 admission_source_id_20 admission_source_id_22 admission_source_id_25 admission_source_id_3 admission_source_id_4 admission_source_id_5 admission_source_id_6 admission_source_id_7 admission_source_id_8 admission_source_id_9 max_glu_serum__200 max_glu_serum__300 max_glu_serum_NA max_glu_serum_Norm A1Cresult__7 A1Cresult__8 A1Cresult_NA A1Cresult_Norm metformin_Down metformin_No metformin_Steady metformin_Up insulin_Down insulin_No insulin_Steady insulin_Up change_Ch change_No diabetesMed_No diabetesMed_Yes --log-dir logs/adp --base_noise 3.0 --alpha 0.3 --min_noise 0.5 --local_epochs 3
+Starting client: INFO flwr 2025-11-18 21:09:10,914 | grpc.py:49 | Opened insecure gRPC connection (no certificates were passed)
+11/18/2025 21:09:10:INFO:Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2025-11-18 21:09:10,929 | connection.py:42 | ChannelConnectivity.IDLE
+11/18/2025 21:09:10:DEBUG:ChannelConnectivity.IDLE
+DEBUG flwr 2025-11-18 21:09:10,930 | connection.py:42 | ChannelConnectivity.CONNECTING
+11/18/2025 21:09:10:DEBUG:ChannelConnectivity.CONNECTING
+DEBUG flwr 2025-11-18 21:09:10,941 | connection.py:42 | ChannelConnectivity.READY
+11/18/2025 21:09:10:DEBUG:ChannelConnectivity.READY
+INFO flwr 2025-11-18 21:09:10,943 | server.py:280 | Received initial parameters from one random client
+INFO flwr 2025-11-18 21:09:10,943 | server.py:91 | Evaluating initial parameters
+INFO flwr 2025-11-18 21:09:10,944 | server.py:104 | FL starting
+INFO flwr 2025-11-18 21:09:11,006 | grpc.py:49 | Opened insecure gRPC connection (no certificates were passed)
+11/18/2025 21:09:11:INFO:Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2025-11-18 21:09:11,008 | connection.py:42 | ChannelConnectivity.IDLE
+11/18/2025 21:09:11:DEBUG:ChannelConnectivity.IDLE
+DEBUG flwr 2025-11-18 21:09:11,009 | server.py:222 | fit_round 1: strategy sampled 2 clients (out of 2)
+DEBUG flwr 2025-11-18 21:09:11,011 | connection.py:42 | ChannelConnectivity.READY
+11/18/2025 21:09:11:DEBUG:ChannelConnectivity.READY
+/home/samkit/Web3/BTP/venv/lib/python3.12/site-packages/opacus/privacy_engine.py:96: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/samkit/Web3/BTP/venv/lib/python3.12/site-packages/opacus/privacy_engine.py:96: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+INFO flwr 2025-11-18 21:09:12,105 | grpc.py:49 | Opened insecure gRPC connection (no certificates were passed)
+11/18/2025 21:09:12:INFO:Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2025-11-18 21:09:12,119 | connection.py:42 | ChannelConnectivity.IDLE
+11/18/2025 21:09:12:DEBUG:ChannelConnectivity.IDLE
+DEBUG flwr 2025-11-18 21:09:12,120 | connection.py:42 | ChannelConnectivity.CONNECTING
+11/18/2025 21:09:12:DEBUG:ChannelConnectivity.CONNECTING
+DEBUG flwr 2025-11-18 21:09:12,121 | connection.py:42 | ChannelConnectivity.READY
+11/18/2025 21:09:12:DEBUG:ChannelConnectivity.READY
+/home/samkit/Web3/BTP/client_adp.py:130: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/samkit/Web3/BTP/client_adp.py:130: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+INFO flwr 2025-11-18 21:09:13,948 | grpc.py:49 | Opened insecure gRPC connection (no certificates were passed)
+11/18/2025 21:09:13:INFO:Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2025-11-18 21:09:13,960 | connection.py:42 | ChannelConnectivity.IDLE
+11/18/2025 21:09:13:DEBUG:ChannelConnectivity.IDLE
+DEBUG flwr 2025-11-18 21:09:13,968 | connection.py:42 | ChannelConnectivity.READY
+11/18/2025 21:09:13:DEBUG:ChannelConnectivity.READY
+INFO flwr 2025-11-18 21:09:16,250 | grpc.py:49 | Opened insecure gRPC connection (no certificates were passed)
+11/18/2025 21:09:16:INFO:Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2025-11-18 21:09:16,296 | connection.py:42 | ChannelConnectivity.IDLE
+11/18/2025 21:09:16:DEBUG:ChannelConnectivity.IDLE
+DEBUG flwr 2025-11-18 21:09:16,316 | connection.py:42 | ChannelConnectivity.READY
+11/18/2025 21:09:16:DEBUG:ChannelConnectivity.READY
+INFO flwr 2025-11-18 21:09:16,710 | grpc.py:49 | Opened insecure gRPC connection (no certificates were passed)
+11/18/2025 21:09:16:INFO:Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2025-11-18 21:09:16,770 | connection.py:42 | ChannelConnectivity.IDLE
+11/18/2025 21:09:16:DEBUG:ChannelConnectivity.IDLE
+DEBUG flwr 2025-11-18 21:09:16,772 | connection.py:42 | ChannelConnectivity.READY
+11/18/2025 21:09:16:DEBUG:ChannelConnectivity.READY
+/home/samkit/Web3/BTP/venv/lib/python3.12/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+/home/samkit/Web3/BTP/venv/lib/python3.12/site-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+DEBUG flwr 2025-11-18 21:09:47,084 | server.py:236 | fit_round 1 received 2 results and 0 failures
+WARNING flwr 2025-11-18 21:09:47,086 | fedavg.py:242 | No fit_metrics_aggregation_fn provided
+DEBUG flwr 2025-11-18 21:09:47,087 | server.py:173 | evaluate_round 1: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 21:09:48,218 | server.py:187 | evaluate_round 1 received 6 results and 0 failures
+WARNING flwr 2025-11-18 21:09:48,218 | fedavg.py:273 | No evaluate_metrics_aggregation_fn provided
+DEBUG flwr 2025-11-18 21:09:48,218 | server.py:222 | fit_round 2: strategy sampled 6 clients (out of 6)
+/home/samkit/Web3/BTP/venv/lib/python3.12/site-packages/opacus/privacy_engine.py:96: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/samkit/Web3/BTP/venv/lib/python3.12/site-packages/opacus/privacy_engine.py:96: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/samkit/Web3/BTP/client_adp.py:130: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/samkit/Web3/BTP/client_adp.py:130: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/samkit/Web3/BTP/venv/lib/python3.12/site-packages/opacus/privacy_engine.py:96: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/samkit/Web3/BTP/venv/lib/python3.12/site-packages/opacus/privacy_engine.py:96: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+/home/samkit/Web3/BTP/client_adp.py:130: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/samkit/Web3/BTP/client_adp.py:130: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+DEBUG flwr 2025-11-18 21:11:56,149 | server.py:236 | fit_round 2 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 21:11:56,153 | server.py:173 | evaluate_round 2: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 21:11:57,216 | server.py:187 | evaluate_round 2 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 21:11:57,217 | server.py:222 | fit_round 3: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 21:13:58,067 | server.py:236 | fit_round 3 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 21:13:58,069 | server.py:173 | evaluate_round 3: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 21:13:59,227 | server.py:187 | evaluate_round 3 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 21:13:59,228 | server.py:222 | fit_round 4: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 21:15:59,967 | server.py:236 | fit_round 4 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 21:15:59,969 | server.py:173 | evaluate_round 4: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 21:16:00,906 | server.py:187 | evaluate_round 4 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 21:16:00,906 | server.py:222 | fit_round 5: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 21:18:05,144 | server.py:236 | fit_round 5 received 6 results and 0 failures
+DEBUG flwr 2025-11-18 21:18:05,146 | server.py:173 | evaluate_round 5: strategy sampled 6 clients (out of 6)
+DEBUG flwr 2025-11-18 21:18:06,337 | server.py:187 | evaluate_round 5 received 6 results and 0 failures
+INFO flwr 2025-11-18 21:18:06,337 | server.py:153 | FL finished in 548.6904872179948
+INFO flwr 2025-11-18 21:18:06,339 | app.py:225 | app_fit: losses_distributed [(1, 0.6854199013706579), (2, 0.6879372976181973), (3, 0.5232561580938063), (4, 0.5423547552301081), (5, 0.5809918112901096)]
+INFO flwr 2025-11-18 21:18:06,339 | app.py:226 | app_fit: metrics_distributed_fit {}
+INFO flwr 2025-11-18 21:18:06,339 | app.py:227 | app_fit: metrics_distributed {}
+INFO flwr 2025-11-18 21:18:06,339 | app.py:228 | app_fit: losses_centralized []
+INFO flwr 2025-11-18 21:18:06,339 | app.py:229 | app_fit: metrics_centralized {}
+DEBUG flwr 2025-11-18 21:18:06,346 | connection.py:139 | gRPC channel closed
+DEBUG flwr 2025-11-18 21:18:06,346 | connection.py:139 | gRPC channel closed
+11/18/2025 21:18:06:DEBUG:gRPC channel closed
+11/18/2025 21:18:06:DEBUG:gRPC channel closed
+DEBUG flwr 2025-11-18 21:18:06,346 | connection.py:139 | gRPC channel closed
+DEBUG flwr 2025-11-18 21:18:06,346 | connection.py:139 | gRPC channel closed
+INFO flwr 2025-11-18 21:18:06,347 | app.py:215 | Disconnect and shut down
+INFO flwr 2025-11-18 21:18:06,347 | app.py:215 | Disconnect and shut down
+11/18/2025 21:18:06:DEBUG:gRPC channel closed
+11/18/2025 21:18:06:INFO:Disconnect and shut down
+11/18/2025 21:18:06:INFO:Disconnect and shut down
+11/18/2025 21:18:06:DEBUG:gRPC channel closed
+INFO flwr 2025-11-18 21:18:06,347 | app.py:215 | Disconnect and shut down
+11/18/2025 21:18:06:INFO:Disconnect and shut down
+INFO flwr 2025-11-18 21:18:06,347 | app.py:215 | Disconnect and shut down
+11/18/2025 21:18:06:INFO:Disconnect and shut down
+DEBUG flwr 2025-11-18 21:18:06,347 | connection.py:139 | gRPC channel closed
+11/18/2025 21:18:06:DEBUG:gRPC channel closed
+INFO flwr 2025-11-18 21:18:06,348 | app.py:215 | Disconnect and shut down
+11/18/2025 21:18:06:INFO:Disconnect and shut down
+DEBUG flwr 2025-11-18 21:18:06,347 | connection.py:139 | gRPC channel closed
+11/18/2025 21:18:06:DEBUG:gRPC channel closed
+INFO flwr 2025-11-18 21:18:06,348 | app.py:215 | Disconnect and shut down
+11/18/2025 21:18:06:INFO:Disconnect and shut down
+python client_adp.py --data clients/client_3_hospital_4.csv --client_id 3 --label readmit_30 --server-address 127.0.0.1:8080 --features time_in_hospital num_lab_procedures num_procedures num_medications number_outpatient number_emergency number_inpatient number_diagnoses age race_AfricanAmerican race_Asian race_Caucasian race_Hispanic race_Other gender_Female gender_Male gender_Unknown_Invalid admission_type_id_1 admission_type_id_2 admission_type_id_3 admission_type_id_4 admission_type_id_5 admission_type_id_6 admission_type_id_7 admission_type_id_8 discharge_disposition_id_1 discharge_disposition_id_10 discharge_disposition_id_11 discharge_disposition_id_12 discharge_disposition_id_13 discharge_disposition_id_14 discharge_disposition_id_15 discharge_disposition_id_16 discharge_disposition_id_17 discharge_disposition_id_18 discharge_disposition_id_19 discharge_disposition_id_2 discharge_disposition_id_20 discharge_disposition_id_22 discharge_disposition_id_23 discharge_disposition_id_24 discharge_disposition_id_25 discharge_disposition_id_27 discharge_disposition_id_28 discharge_disposition_id_3 discharge_disposition_id_4 discharge_disposition_id_5 discharge_disposition_id_6 discharge_disposition_id_7 discharge_disposition_id_8 discharge_disposition_id_9 admission_source_id_1 admission_source_id_10 admission_source_id_11 admission_source_id_13 admission_source_id_14 admission_source_id_17 admission_source_id_2 admission_source_id_20 admission_source_id_22 admission_source_id_25 admission_source_id_3 admission_source_id_4 admission_source_id_5 admission_source_id_6 admission_source_id_7 admission_source_id_8 admission_source_id_9 max_glu_serum__200 max_glu_serum__300 max_glu_serum_NA max_glu_serum_Norm A1Cresult__7 A1Cresult__8 A1Cresult_NA A1Cresult_Norm metformin_Down metformin_No metformin_Steady metformin_Up insulin_Down insulin_No insulin_Steady insulin_Up change_Ch change_No diabetesMed_No diabetesMed_Yes --log-dir logs/adp --base_noise 3.0 --alpha 0.3 --min_noise 0.5 --local_epochs 3
+Starting client: python client_adp.py --data clients/client_4_hospital_6.csv --client_id 4 --label readmit_30 --server-address 127.0.0.1:8080 --features time_in_hospital num_lab_procedures num_procedures num_medications number_outpatient number_emergency number_inpatient number_diagnoses age race_AfricanAmerican race_Asian race_Caucasian race_Hispanic race_Other gender_Female gender_Male gender_Unknown_Invalid admission_type_id_1 admission_type_id_2 admission_type_id_3 admission_type_id_4 admission_type_id_5 admission_type_id_6 admission_type_id_7 admission_type_id_8 discharge_disposition_id_1 discharge_disposition_id_10 discharge_disposition_id_11 discharge_disposition_id_12 discharge_disposition_id_13 discharge_disposition_id_14 discharge_disposition_id_15 discharge_disposition_id_16 discharge_disposition_id_17 discharge_disposition_id_18 discharge_disposition_id_19 discharge_disposition_id_2 discharge_disposition_id_20 discharge_disposition_id_22 discharge_disposition_id_23 discharge_disposition_id_24 discharge_disposition_id_25 discharge_disposition_id_27 discharge_disposition_id_28 discharge_disposition_id_3 discharge_disposition_id_4 discharge_disposition_id_5 discharge_disposition_id_6 discharge_disposition_id_7 discharge_disposition_id_8 discharge_disposition_id_9 admission_source_id_1 admission_source_id_10 admission_source_id_11 admission_source_id_13 admission_source_id_14 admission_source_id_17 admission_source_id_2 admission_source_id_20 admission_source_id_22 admission_source_id_25 admission_source_id_3 admission_source_id_4 admission_source_id_5 admission_source_id_6 admission_source_id_7 admission_source_id_8 admission_source_id_9 max_glu_serum__200 max_glu_serum__300 max_glu_serum_NA max_glu_serum_Norm A1Cresult__7 A1Cresult__8 A1Cresult_NA A1Cresult_Norm metformin_Down metformin_No metformin_Steady metformin_Up insulin_Down insulin_No insulin_Steady insulin_Up change_Ch change_No diabetesMed_No diabetesMed_Yes --log-dir logs/adp --base_noise 3.0 --alpha 0.3 --min_noise 0.5 --local_epochs 3
+Starting client: python client_adp.py --data clients/client_5_hospital_2.csv --client_id 5 --label readmit_30 --server-address 127.0.0.1:8080 --features time_in_hospital num_lab_procedures num_procedures num_medications number_outpatient number_emergency number_inpatient number_diagnoses age race_AfricanAmerican race_Asian race_Caucasian race_Hispanic race_Other gender_Female gender_Male gender_Unknown_Invalid admission_type_id_1 admission_type_id_2 admission_type_id_3 admission_type_id_4 admission_type_id_5 admission_type_id_6 admission_type_id_7 admission_type_id_8 discharge_disposition_id_1 discharge_disposition_id_10 discharge_disposition_id_11 discharge_disposition_id_12 discharge_disposition_id_13 discharge_disposition_id_14 discharge_disposition_id_15 discharge_disposition_id_16 discharge_disposition_id_17 discharge_disposition_id_18 discharge_disposition_id_19 discharge_disposition_id_2 discharge_disposition_id_20 discharge_disposition_id_22 discharge_disposition_id_23 discharge_disposition_id_24 discharge_disposition_id_25 discharge_disposition_id_27 discharge_disposition_id_28 discharge_disposition_id_3 discharge_disposition_id_4 discharge_disposition_id_5 discharge_disposition_id_6 discharge_disposition_id_7 discharge_disposition_id_8 discharge_disposition_id_9 admission_source_id_1 admission_source_id_10 admission_source_id_11 admission_source_id_13 admission_source_id_14 admission_source_id_17 admission_source_id_2 admission_source_id_20 admission_source_id_22 admission_source_id_25 admission_source_id_3 admission_source_id_4 admission_source_id_5 admission_source_id_6 admission_source_id_7 admission_source_id_8 admission_source_id_9 max_glu_serum__200 max_glu_serum__300 max_glu_serum_NA max_glu_serum_Norm A1Cresult__7 A1Cresult__8 A1Cresult_NA A1Cresult_Norm metformin_Down metformin_No metformin_Steady metformin_Up insulin_Down insulin_No insulin_Steady insulin_Up change_Ch change_No diabetesMed_No diabetesMed_Yes --log-dir logs/adp --base_noise 3.0 --alpha 0.3 --min_noise 0.5 --local_epochs 3
+
+================================================================================
+=== Running ADP experiment ===
+Command: python orchestrator.py --client_script client_adp.py --clients_dir clients --rounds 5 --label readmit_30 --client_args --log-dir logs/adp --base_noise 3.0 --alpha 0.3 --min_noise 0.5 --local_epochs 3
+================================================================================
+
